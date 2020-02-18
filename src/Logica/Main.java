@@ -18,6 +18,7 @@ public class Main {
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(file));
 
+			//Lee el archivo y asigna los valores necesitados para el ejercicio.
 			clientes=Integer.parseInt(br.readLine().split("=")[1]);
 			mensajes=Integer.parseInt(br.readLine().split("=")[1]);
 			servidores=Integer.parseInt(br.readLine().split("=")[1]);
@@ -25,10 +26,6 @@ public class Main {
 			
 			br.close();
 			
-			System.out.println(clientes);
-			System.out.println(mensajes);
-			System.out.println(servidores);
-			System.out.println(tam_bufer);
 			
 		} catch (NumberFormatException | IOException e) {
 			// TODO Auto-generated catch block
