@@ -1,28 +1,40 @@
 package Logica;
 
-import java.util.ArrayList;
-
 public class Cliente extends Thread{
 	
 	private Buffer b;
 	private int enviados;
 	private int respondidos;
 	private int id;
-	private ArrayList<Mensaje> mensajes;
-	private ArrayList<Mensaje> respuestas;
 
 	
-	public Cliente(Buffer b, ArrayList<Mensaje> mensajes, int id){
+	public Cliente(Buffer b, int id, int enviados){
 		this.b = b;
-		this.mensajes = mensajes;
 		this.id = id;
-		respuestas = new ArrayList<Mensaje>();
-		this.enviados = mensajes.size();
-		this.respondidos=respuestas.size();
+		this.enviados = enviados;
+		this.respondidos=0;
+	}
+	
+	public int darRespondidos(){
+		return respondidos;
+	}
+	
+	public void registrarRespuesta(){
+		respondidos++;
+	}
+	
+	public int darId(){
+		return id;
+	}
+	
+	public int darEnviados(){
+		return enviados;
 	}
 	
 	public void run(){
-		
+		while(enviados!=respondidos){
+			
+		}
 	}
 
 	//Cliente
