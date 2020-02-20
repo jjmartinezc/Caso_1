@@ -8,13 +8,13 @@ public class Mensaje {
 	private int msg; 
 	
 	/**
-	 * Cliente que genera el mensaje
+	 * id del mensaje
 	 */
-	private Cliente client;
+	private int id;
 	
-	public Mensaje(Cliente c){
+	public Mensaje(int id){
 		msg = 0;
-		client = c;
+		this.id=id;
 	}
 	
 	/**
@@ -25,11 +25,11 @@ public class Mensaje {
 	}
 	
 	/**
-	 * Retorna el cliente dueño del mensaje
-	 * @return client, cliente dueño del mensaje
+	 * Retorna el id del mensaje
+	 * @return id, id del mensaje
 	 */
-	public Cliente darCliente(){
-		return client;
+	public int darId(){
+		return id;
 	}
 	
 	/**

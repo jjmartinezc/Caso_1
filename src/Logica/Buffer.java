@@ -18,10 +18,10 @@ public class Buffer {
 		while(mensajes.size()< tamBuffer){
 			synchronized(msg){
 				mensajes.add(msg);
-				System.out.println("Se agregó el mensaje del cliente: " + msg.darCliente() + " al buffer");
+				System.out.println("Se agregó el mensaje con id: " + msg.darId() + " al buffer");
 			}
 			synchronized(msg){
-				System.out.println("Se agregó al buffer la respuesta del servidor al mensaje del cliente: " + msg.darCliente());
+				System.out.println("Se agregó al buffer la respuesta del servidor al mensaje del cliente: " + msg.darId());
 			}
 		}
 		synchronized(msg){
