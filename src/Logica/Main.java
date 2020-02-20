@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
+	
+	private static ArrayList<Cliente> cl = new ArrayList<Cliente>();
+	private static ArrayList<Servidor> server = new ArrayList<Servidor>();
 
 	public static void main(String[] args) {
 
@@ -16,6 +19,8 @@ public class Main {
 		int servidores;
 		int tam_buffer;
 
+
+		
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(file));
 
@@ -25,8 +30,8 @@ public class Main {
 			servidores=Integer.parseInt(br.readLine().split("=")[1]);
 			tam_buffer=Integer.parseInt(br.readLine().split("=")[1]);
 
-			ArrayList<Cliente> cl = new ArrayList<Cliente>();
-			ArrayList<Servidor> server = new ArrayList<Servidor>();
+			
+
 			br.close();
 
 			//Inicializa el buffer
@@ -53,6 +58,18 @@ public class Main {
 		}
 
 
+	}
+	
+	public void run(){
+		for(int i =0;i<cl.size();i++){
+			cl.get(i).start();
+		}	
+		
+		for(int i =0;i<server.size();i++){
+			server.get(i).start();
+		}
+		
+		
 	}
 
 }

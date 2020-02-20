@@ -16,7 +16,7 @@ public class Buffer {
 	
 	public void recibirMensaje(Mensaje msg){
 		while(mensajes.size()< tamBuffer){
-			synchronized(this){
+			synchronized(msg){
 				mensajes.add(msg);
 				System.out.println("Se agregó el mensaje del cliente: " + msg.darCliente() + " al buffer");
 			}
@@ -34,7 +34,8 @@ public class Buffer {
 					e.printStackTrace();
 				}
 			}
-		}
-		
+		}		
 	}
+	
+	
 }
