@@ -52,7 +52,6 @@ public class Buffer {
 		while(mensajes.size()==0){
 			synchronized(this){
 				try {
-					System.out.println("Gonoplasta");
 					//this.wait();
 					System.out.println("No hay mensajes en el buffer.");
 				} catch (Exception e) {
