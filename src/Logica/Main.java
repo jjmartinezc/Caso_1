@@ -13,7 +13,7 @@ public class Main {
 	private static int clientes;
 	private static int mensajes;
 	private static int servidores;
-	private static int tam_buffer;
+	public static int tam_buffer;
 
 	public static void main(String[] args) {
 
@@ -27,8 +27,6 @@ public class Main {
 			servidores=Integer.parseInt(br.readLine().split("=")[1]);
 			tam_buffer=Integer.parseInt(br.readLine().split("=")[1]);
 
-			System.out.println(clientes);
-			System.out.println(tam_buffer);
 
 			br.close();
 
@@ -59,19 +57,26 @@ public class Main {
 
 		run();
 	}
-	
 
-	public static void run(){
+
+	public static void run(){	
+
 		for(int i =0;i<cl.size();i++){
 			cl.get(i).start();
-
 		}	
 
 		for(int i =0;i<server.size();i++){
 			server.get(i).start();
 		}
 
-
 	}
+
+	public int darClientes(){
+		return clientes;
+	}
+	public int darMensajes(){
+		return mensajes;
+	}
+
 
 }
