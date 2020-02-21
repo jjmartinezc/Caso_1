@@ -37,7 +37,8 @@ public class Cliente extends Thread{
 	
 	public void run(){
 		while(enviados!=respondidos){
-			//b.recibirMensaje();
+			for(int i=0;i<mensajes.size();i++)
+			b.recibirMensaje(mensajes.get(i));
 		}
 	}
 

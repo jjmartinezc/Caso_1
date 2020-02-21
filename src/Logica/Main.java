@@ -27,7 +27,8 @@ public class Main {
 			servidores=Integer.parseInt(br.readLine().split("=")[1]);
 			tam_buffer=Integer.parseInt(br.readLine().split("=")[1]);
 
-
+			System.out.println(clientes);
+			System.out.println(tam_buffer);
 
 			br.close();
 
@@ -56,13 +57,14 @@ public class Main {
 			e.printStackTrace();
 		}
 
-
+		run();
 	}
 	
 
-	public void run(){
+	public static void run(){
 		for(int i =0;i<cl.size();i++){
 			cl.get(i).start();
+
 		}	
 
 		for(int i =0;i<server.size();i++){

@@ -10,4 +10,10 @@ public class Servidor extends Thread{
 		this.id = id;
 	}
 	
+	public void run(){
+		while(true){
+			b.darMensajesServidor().responderMsg();
+			System.out.println("Mensaje respondido");
+		}
+	}
 }
